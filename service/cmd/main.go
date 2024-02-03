@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	rgb "github.com/jgfranco17/rgbtext/core"
+	rgb "github.com/jgfranco17/rgbtext/core/pkg/rgb"
 )
 
 func main() {
@@ -27,5 +27,5 @@ func main() {
 		output = append(output, input)
 	}
 
-	rgb.print(output)
+	rgb.Print(output)
 }

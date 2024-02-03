@@ -23,7 +23,7 @@ func createColor(i int) *Color {
 	}
 }
 
-func print(output []rune) {
+func Print(output []rune) {
 	for j := 0; j < len(output); j++ {
 		color := createColor(j)
 		r, g, b := color.Red, color.Green, color.Blue
