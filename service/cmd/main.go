@@ -1,30 +1,12 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"io"
 	"os"
 
+	reader "github.com/jgfranco17/rgbtext/core/pkg/reader"
 	rgb "github.com/jgfranco17/rgbtext/core/pkg/rgb"
 )
-
-func readCliInput() ([]rune, error) {
-	var output []rune
-	reader := bufio.NewReader(os.Stdin)
-	for {
-		input, _, err := reader.ReadRune()
-		if err != nil {
-			if err == io.EOF {
-				break
-			} else {
-				return nil, err
-			}
-		}
-		output = append(output, input)
-	}
-	return output, nil
-}
 
 func main() {
 	info, _ := os.Stdin.Stat()
@@ -35,7 +17,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	output, readErr := readCliInput()
+	output, readErr := reader.ReadCliInput()
 	if readErr != nil {
 		os.Exit(1)
 	}
