@@ -1,0 +1,7 @@
+{
+    "name": "rgbtext",
+    "author": "Chino Franco",
+    "repository": "https://github.com/jgfranco17/rgbtext",
+    "version": "0.0.1",
+    "languages": ["Go"]
+}
